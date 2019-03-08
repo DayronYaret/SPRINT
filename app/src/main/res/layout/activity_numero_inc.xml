@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginVertical="200dp"
+        android:onClick="onIncButtonClick"
         android:text="@string/Increment" />
 
     <TextView
