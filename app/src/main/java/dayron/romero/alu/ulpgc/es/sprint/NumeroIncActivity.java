@@ -3,6 +3,7 @@ package dayron.romero.alu.ulpgc.es.sprint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 public class NumeroIncActivity
@@ -41,7 +42,7 @@ public class NumeroIncActivity
         // deal with the data
         ((TextView) findViewById(R.id.textViewNum)).setText(viewModel.data);
     }
-    public void onIncButtonClick(){
+    public void onIncButtonClick(View view){
         presenter.incButtonClick();
 
     }
