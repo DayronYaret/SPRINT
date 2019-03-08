@@ -24,6 +24,10 @@ interface NumeroIncContract {
 
     interface Model {
         String fetchData();
+
+        void incrementar();
+
+        int getNumero();
     }
 
     interface Router {

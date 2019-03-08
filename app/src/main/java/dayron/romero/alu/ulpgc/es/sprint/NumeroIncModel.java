@@ -20,4 +20,13 @@ numero=0;
         // Log.e(TAG, "fetchData()");
         return "Hello";
     }
+
+    @Override
+    public void incrementar() {
+        numero++;
+
+    }
+    public int getNumero(){
+        return numero;
+    }
 }

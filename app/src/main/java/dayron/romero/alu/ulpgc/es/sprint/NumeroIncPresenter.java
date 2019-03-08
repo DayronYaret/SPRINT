@@ -35,12 +35,13 @@ public class NumeroIncPresenter implements NumeroIncContract.Presenter {
     @Override
     public void fetchData() {
         // Log.e(TAG, "fetchData()");
-
+        viewModel.data=Integer.toString(model.getNumero());
         // set passed state
         NumeroIncState state = router.getDataFromPreviousScreen();
         if (state != null) {
             viewModel.data = state.data;
         }
+
 
         if (viewModel.data == null) {
             // call the model
@@ -51,13 +52,16 @@ public class NumeroIncPresenter implements NumeroIncContract.Presenter {
         }
 
         // update the view
+        viewModel.data=Integer.toString(model.getNumero());
         view.get().displayData(viewModel);
 
     }
 
     @Override
     public void incButtonClick() {
+        model.incrementar();
 
+        fetchData();
     }
 
 

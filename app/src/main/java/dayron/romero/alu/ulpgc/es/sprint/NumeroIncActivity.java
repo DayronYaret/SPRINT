@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class NumeroIncActivity
@@ -20,6 +21,7 @@ public class NumeroIncActivity
 
         // do the setup
         NumeroIncScreen.configure(this);
+
     }
 
     @Override
@@ -40,7 +42,7 @@ public class NumeroIncActivity
         //Log.e(TAG, "displayData()");
 
         // deal with the data
-        ((TextView) findViewById(R.id.textViewNum)).setText(viewModel.data);
+        ((TextView) findViewById(R.id.textView)).setText(viewModel.data);
     }
     public void onIncButtonClick(View view){
         presenter.incButtonClick();
