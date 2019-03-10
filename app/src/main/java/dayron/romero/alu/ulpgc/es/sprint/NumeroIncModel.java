@@ -10,9 +10,9 @@ import android.support.v4.app.FragmentActivity;
 public class NumeroIncModel implements NumeroIncContract.Model {
 
     public static String TAG = NumeroIncModel.class.getSimpleName();
-private int numero;
+    private int numero;
     public NumeroIncModel() {
-numero=0;
+        numero=0;
     }
 
     @Override
@@ -21,12 +21,4 @@ numero=0;
         return "Hello";
     }
 
-    @Override
-    public void incrementar() {
-        numero++;
-
-    }
-    public int getNumero(){
-        return numero;
-    }
 }

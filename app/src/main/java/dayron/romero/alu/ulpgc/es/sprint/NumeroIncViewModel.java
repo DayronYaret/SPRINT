@@ -1,6 +1,6 @@
 package dayron.romero.alu.ulpgc.es.sprint;
 
 public class NumeroIncViewModel {
-
-    public String data;
+    public int numero;
+    public String data= Integer.toString(numero);
 }
