@@ -11,6 +11,7 @@ public class NumeroIncModel implements NumeroIncContract.Model {
 
     public static String TAG = NumeroIncModel.class.getSimpleName();
     private int numero;
+    private int cuenta;
     public NumeroIncModel() {
         numero=0;
     }
@@ -20,5 +21,25 @@ public class NumeroIncModel implements NumeroIncContract.Model {
         // Log.e(TAG, "fetchData()");
         return "Hello";
     }
+    public void incrementar(){
+        if(numero<9) {
+            numero++;
+        }else {
+            numero = 0;
+        }
+        cuenta++;
+    }
+    public int getNumero(){
+        return numero;
+    }
 
+    public int getCuenta(){
+        return cuenta;
+    }
+    public void setNumero(int numero){
+        this.numero=numero;
+    }
+    public void setCuenta(int cuenta){
+        this.cuenta=cuenta;
+    }
 }

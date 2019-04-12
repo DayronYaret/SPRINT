@@ -3,4 +3,7 @@
     <string name="Increment">Increment</string>
     <string name="Incrementar">Incrementar</string>
     <string name="Numero">Numero</string>
+    <string name="reset">Reset</string>
+    <string name="cuenta">cuenta</string>
+    <string name="goToReset">Go To Reset</string>
 </resources>

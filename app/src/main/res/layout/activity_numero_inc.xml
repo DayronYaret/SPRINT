@@ -26,5 +26,12 @@
             android:layout_gravity="center"
             android:onClick="onIncButtonClick"
             android:text="@string/Incrementar" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/goToReset" />
     </LinearLayout>
 </FrameLayout>

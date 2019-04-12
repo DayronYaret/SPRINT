@@ -38,7 +38,8 @@ public class NumeroIncPresenter implements NumeroIncContract.Presenter {
         // set passed state
         NumeroIncState state = router.getDataFromPreviousScreen();
         if (state != null) {
-            viewModel.data = state.data;
+            viewModel.numero = state.numero;
+            viewModel.cuenta= state.cuenta;
 
         }
 
@@ -54,13 +55,17 @@ public class NumeroIncPresenter implements NumeroIncContract.Presenter {
         // update the view
         viewModel.data=Integer.toString(viewModel.numero);
         router.passDataToNextScreen(state);
+        model.setNumero(viewModel.numero);
+        model.setCuenta(viewModel.cuenta);
         view.get().displayData(viewModel);
 
     }
 
     @Override
     public void incButtonClick() {
-        viewModel.numero++;
+        model.incrementar();
+        viewModel.numero= model.getNumero();
+        viewModel.cuenta=model.getCuenta();
         fetchData();
     }
 

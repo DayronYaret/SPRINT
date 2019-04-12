@@ -24,7 +24,11 @@ interface NumeroIncContract {
 
     interface Model {
         String fetchData();
-
+        void incrementar();
+        int getNumero();
+        int getCuenta();
+        void setNumero(int numero);
+        void setCuenta(int cuenta);
     }
 
     interface Router {

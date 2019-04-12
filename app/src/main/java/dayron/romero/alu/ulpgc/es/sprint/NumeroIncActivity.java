@@ -13,6 +13,7 @@ public class NumeroIncActivity
     public static String TAG = NumeroIncActivity.class.getSimpleName();
 
     private NumeroIncContract.Presenter presenter;
+    private Button goReset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,14 @@ public class NumeroIncActivity
 
         // do the setup
         NumeroIncScreen.configure(this);
+        goReset = findViewById(R.id.button2);
+        // listeners
+        goReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.startResetActivity();
+            }
+        });
 
     }
 
