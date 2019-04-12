@@ -3,6 +3,8 @@ package dayron.romero.alu.ulpgc.es.sprint.ResetActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import dayron.romero.alu.ulpgc.es.sprint.R;
@@ -13,6 +15,7 @@ public class ResetActivityActivity
   public static String TAG = ResetActivityActivity.class.getSimpleName();
 
   private ResetActivityContract.Presenter presenter;
+  private Button reset;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,13 @@ public class ResetActivityActivity
 
     // do the setup
     ResetActivityScreen.configure(this);
+    reset = findViewById(R.id.ResetButton);
+    reset.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        presenter.resetPressed();
+      }
+    });
   }
 
   @Override
@@ -42,5 +52,9 @@ public class ResetActivityActivity
 
     // deal with the data
     ((TextView) findViewById(R.id.countTextView)).setText(viewModel.data);
+  }
+  @Override
+  public void acabar(){
+    finish();
   }
 }

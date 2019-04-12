@@ -39,7 +39,8 @@ public class ResetActivityPresenter implements ResetActivityContract.Presenter {
     // set passed state
     ResetActivityState state = router.getDataFromPreviousScreen();
     if (state != null) {
-      viewModel.data = state.data;
+      viewModel.cuenta = state.cuenta;
+      viewModel.data = Integer.toString(viewModel.cuenta);
     }
 
     if (viewModel.data == null) {
@@ -54,6 +55,12 @@ public class ResetActivityPresenter implements ResetActivityContract.Presenter {
     view.get().displayData(viewModel);
 
   }
+    public void resetPressed(){
+    model.reset();
+    view.get().acabar();
+    viewModel.cuenta=0;
+    viewModel.numero=0;
 
+    }
 
 }

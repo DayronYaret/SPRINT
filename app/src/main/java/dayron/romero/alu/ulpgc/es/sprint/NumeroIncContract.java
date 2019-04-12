@@ -20,6 +20,8 @@ interface NumeroIncContract {
         void fetchData();
 
         void incButtonClick();
+
+        void startResetActivity();
     }
 
     interface Model {
@@ -29,6 +31,7 @@ interface NumeroIncContract {
         int getCuenta();
         void setNumero(int numero);
         void setCuenta(int cuenta);
+        boolean esCero();
     }
 
     interface Router {

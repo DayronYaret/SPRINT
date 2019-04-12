@@ -27,7 +27,7 @@ public class NumeroIncActivity
         goReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //presenter.startResetActivity();
+                presenter.startResetActivity();
             }
         });
 
@@ -38,6 +38,7 @@ public class NumeroIncActivity
         super.onResume();
 
         // do some work
+
         presenter.fetchData();
     }
 

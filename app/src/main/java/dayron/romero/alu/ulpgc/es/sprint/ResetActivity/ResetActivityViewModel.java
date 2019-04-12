@@ -4,4 +4,5 @@ public class ResetActivityViewModel {
 
   public String data;
   public int cuenta;
+  public int numero;
 }

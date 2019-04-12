@@ -8,6 +8,8 @@ interface ResetActivityContract {
     void injectPresenter(Presenter presenter);
 
     void displayData(ResetActivityViewModel viewModel);
+
+    void acabar();
   }
 
   interface Presenter {
@@ -18,10 +20,12 @@ interface ResetActivityContract {
     void injectRouter(Router router);
 
     void fetchData();
+    void resetPressed();
   }
 
   interface Model {
     String fetchData();
+    void reset();
   }
 
   interface Router {

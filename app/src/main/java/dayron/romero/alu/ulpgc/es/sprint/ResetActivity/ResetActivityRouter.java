@@ -31,6 +31,7 @@ public class ResetActivityRouter implements ResetActivityContract.Router {
   @Override
   public ResetActivityState getDataFromPreviousScreen() {
     ResetActivityState state = mediator.getResetActivityState();
+    state.cuenta=mediator.getNumeroIncState().cuenta;
     return state;
   }
 }

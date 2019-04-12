@@ -42,8 +42,10 @@ public class NumeroIncPresenter implements NumeroIncContract.Presenter {
             viewModel.cuenta= state.cuenta;
 
         }
-
-
+        if(model.esCero()==true) {
+            viewModel.numero=0;
+            view.get().displayData(viewModel);
+        }
         if (viewModel.data == null) {
             // call the model
             String data = model.fetchData();
@@ -55,8 +57,6 @@ public class NumeroIncPresenter implements NumeroIncContract.Presenter {
         // update the view
         viewModel.data=Integer.toString(viewModel.numero);
         router.passDataToNextScreen(state);
-        model.setNumero(viewModel.numero);
-        model.setCuenta(viewModel.cuenta);
         view.get().displayData(viewModel);
 
     }
@@ -64,10 +64,16 @@ public class NumeroIncPresenter implements NumeroIncContract.Presenter {
     @Override
     public void incButtonClick() {
         model.incrementar();
-        viewModel.numero= model.getNumero();
-        viewModel.cuenta=model.getCuenta();
+        viewModel.numero = model.getNumero();
+        viewModel.cuenta = model.getCuenta();
         fetchData();
     }
+    public void startResetActivity(){
+      NumeroIncState state = new NumeroIncState();
+      state.numero = viewModel.numero;
+      state.cuenta = viewModel.cuenta;
+      router.navigateToNextScreen();
 
+    }
 
 }
