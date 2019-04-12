@@ -27,7 +27,7 @@ public class NumeroIncActivity
         goReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.startResetActivity();
+                //presenter.startResetActivity();
             }
         });
 

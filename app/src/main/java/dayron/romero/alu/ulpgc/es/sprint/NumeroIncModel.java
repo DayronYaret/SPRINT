@@ -22,10 +22,9 @@ public class NumeroIncModel implements NumeroIncContract.Model {
         return "Hello";
     }
     public void incrementar(){
-        if(numero<9) {
-            numero++;
-        }else {
-            numero = 0;
+        numero++;
+        if(numero >9){
+          numero=0;
         }
         cuenta++;
     }
